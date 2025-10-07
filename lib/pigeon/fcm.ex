@@ -155,6 +155,7 @@ defmodule Pigeon.FCM do
           do_request!(notification, state)
 
         {:error, reason} ->
+          # TODO: in this case we lose the notification
           {:stop, reason}
       end
     end
